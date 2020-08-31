@@ -10,7 +10,21 @@ win.geometry('1000x800')
 
 main_menu = tk.Menu()
 
+new_icon=tk.PhotoImage(file='icons/folder.png')
+open_icon=tk.PhotoImage(file='icons/open.png')
+save_icon=tk.PhotoImage(file='icons/save.png')
+saveas_icon=tk.PhotoImage(file='icons/saveas.png')
+exit_icon=tk.PhotoImage(file='icons/exit.png')
+
 file = tk.Menu(main_menu,tearoff=False)
+
+file.add_command(label='   New',image=new_icon,compound=tk.LEFT, accelerator='Ctrl+N')
+file.add_command(label='   Open',image=open_icon,compound=tk.LEFT, accelerator='Ctrl+O')
+file.add_command(label='   Save',image=save_icon,compound=tk.LEFT, accelerator='Ctrl+S')
+file.add_command(label='   SaveAs',image=saveas_icon,compound=tk.LEFT, accelerator='Ctrl+Shift+S')
+file.add_command(label='   Exit',image=exit_icon,compound=tk.LEFT)
+
+
 Edit = tk.Menu(main_menu,tearoff=False) 
 view = tk.Menu(main_menu,tearoff=False)
 color_theme = tk.Menu(main_menu,tearoff=False) 
