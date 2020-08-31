@@ -9,18 +9,21 @@ win.title('Neutron Editor')
 win.geometry('1000x800')
 
 main_menu = tk.Menu()
-
+#file
 new_icon=tk.PhotoImage(file='icons/folder.png')
 open_icon=tk.PhotoImage(file='icons/open.png')
 save_icon=tk.PhotoImage(file='icons/save.png')
 saveas_icon=tk.PhotoImage(file='icons/saveas.png')
 exit_icon=tk.PhotoImage(file='icons/exit.png')
-
+#edit
 copy_icon=tk.PhotoImage(file='icons/copy.png')
 cut_icon=tk.PhotoImage(file='icons/cut.png')
 find_icon=tk.PhotoImage(file='icons/find.png')
 clear_icon=tk.PhotoImage(file='icons/clearall.png')
 paste_icon=tk.PhotoImage(file='icons/paste.png')
+#view
+tool_icon=tk.PhotoImage(file='icons/toolbar.png')
+status_icon=tk.PhotoImage(file='icons/status.png')
 
 file = tk.Menu(main_menu,tearoff=False)
 
@@ -40,6 +43,9 @@ Edit.add_command(label='   Find',image=find_icon,compound=tk.LEFT, accelerator='
 Edit.add_command(label='   Clear All',image=clear_icon,compound=tk.LEFT,accelerator='Ctrl+Alt+C')
 
 view = tk.Menu(main_menu,tearoff=False)
+view.add_checkbutton(label='   ToolBar',image=tool_icon,compound=tk.LEFT,accelerator='')
+view.add_checkbutton(label='   StatusBar',image=status_icon,compound=tk.LEFT,accelerator='')
+
 color_theme = tk.Menu(main_menu,tearoff=False) 
 
 main_menu.add_cascade(label='File',menu=file)
