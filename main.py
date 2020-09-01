@@ -24,6 +24,9 @@ paste_icon=tk.PhotoImage(file='icons/paste.png')
 #view
 tool_icon=tk.PhotoImage(file='icons/toolbar.png')
 status_icon=tk.PhotoImage(file='icons/status.png')
+#theme
+light_icon=tk.PhotoImage(file='icons/light.png')
+dark_icon=tk.PhotoImage(file='icons/dark.png')
 
 file = tk.Menu(main_menu,tearoff=False)
 
@@ -47,6 +50,8 @@ view.add_checkbutton(label='   ToolBar',image=tool_icon,compound=tk.LEFT,acceler
 view.add_checkbutton(label='   StatusBar',image=status_icon,compound=tk.LEFT,accelerator='')
 
 color_theme = tk.Menu(main_menu,tearoff=False) 
+color_theme.add_checkbutton(label='   Light Mode',compound=tk.LEFT,image=light_icon)
+color_theme.add_checkbutton(label='   Dark Mode',compound=tk.LEFT,image=dark_icon)
 
 main_menu.add_cascade(label='File',menu=file)
 main_menu.add_cascade(label='Edit',menu=Edit)
