@@ -32,6 +32,7 @@ dark_icon=tk.PhotoImage(file='icons/dark.png')
 bold_icon=tk.PhotoImage(file='icons/bolds.png')
 ita_icon=tk.PhotoImage(file='icons./italic.png')
 under_icon=tk.PhotoImage(file='icons/underline.png')
+fo_color=tk.PhotoImage(file='icons/Untitled.png')
 
 #fonts
 toolbar=ttk.Label(win)
@@ -53,11 +54,13 @@ size_box.grid(row=0,column=1,padx=5,pady=10)
 
 #stylebuttons
 bold=ttk.Button(toolbar,width=5,image=bold_icon)
-bold.grid(row=0,column=3,padx=5,pady=10)
-bold=ttk.Button(toolbar,width=5,image=ita_icon)
-bold.grid(row=0,column=4,padx=5,pady=10)
-bold=ttk.Button(toolbar,width=5,image=under_icon)
-bold.grid(row=0,column=5,padx=5,pady=10)
+bold.grid(row=0,column=2,padx=5,pady=10)
+italic=ttk.Button(toolbar,width=5,image=ita_icon)
+italic.grid(row=0,column=3,padx=5,pady=10)
+underline=ttk.Button(toolbar,width=5,image=under_icon)
+underline.grid(row=0,column=4,padx=5,pady=10)
+fontcolor=ttk.Button(toolbar,width=5,image=fo_color)
+fontcolor.grid(row=0,column=5,pady=10,padx=5)
 
 file = tk.Menu(main_menu,tearoff=False)
 
