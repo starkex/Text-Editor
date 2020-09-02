@@ -28,6 +28,11 @@ status_icon=tk.PhotoImage(file='icons/status.png')
 light_icon=tk.PhotoImage(file='icons/light.png')
 dark_icon=tk.PhotoImage(file='icons/dark.png')
 
+#buttons
+bold_icon=tk.PhotoImage(file='icons/bolds.png')
+ita_icon=tk.PhotoImage(file='icons./italic.png')
+under_icon=tk.PhotoImage(file='icons/underline.png')
+
 #fonts
 toolbar=ttk.Label(win)
 toolbar.pack(side=tk.TOP,fill=tk.X)
@@ -45,6 +50,14 @@ size_box=ttk.Combobox(toolbar,width=10,textvariable=size_var)
 size_box['values']=tuple(range(2,72,2))
 size_box.current(3)
 size_box.grid(row=0,column=1,padx=5,pady=10)
+
+#stylebuttons
+bold=ttk.Button(toolbar,width=5,image=bold_icon)
+bold.grid(row=0,column=3,padx=5,pady=10)
+bold=ttk.Button(toolbar,width=5,image=ita_icon)
+bold.grid(row=0,column=4,padx=5,pady=10)
+bold=ttk.Button(toolbar,width=5,image=under_icon)
+bold.grid(row=0,column=5,padx=5,pady=10)
 
 file = tk.Menu(main_menu,tearoff=False)
 
