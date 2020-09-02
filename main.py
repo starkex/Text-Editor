@@ -28,6 +28,16 @@ status_icon=tk.PhotoImage(file='icons/status.png')
 light_icon=tk.PhotoImage(file='icons/light.png')
 dark_icon=tk.PhotoImage(file='icons/dark.png')
 
+
+toolbar=ttk.Label(win)
+toolbar.pack(side=tk.TOP,fill=tk.X)
+
+font_fam=tk.font.families()
+font_var=tk.StringVar()
+font_box=ttk.Combobox(toolbar,width=15,textvariable=font_var,state='readonly',background='lightblue')
+font_box['values']=font_fam
+font_box.grid(row=2,column=1,pady=10)
+
 file = tk.Menu(main_menu,tearoff=False)
 
 file.add_command(label='   New',image=new_icon,compound=tk.LEFT, accelerator='Ctrl+N')
@@ -46,10 +56,12 @@ Edit.add_command(label='   Find',image=find_icon,compound=tk.LEFT, accelerator='
 Edit.add_command(label='   Clear All',image=clear_icon,compound=tk.LEFT,accelerator='Ctrl+Alt+C')
 
 view = tk.Menu(main_menu,tearoff=False)
+
 view.add_checkbutton(label='   ToolBar',image=tool_icon,compound=tk.LEFT,accelerator='')
 view.add_checkbutton(label='   StatusBar',image=status_icon,compound=tk.LEFT,accelerator='')
 
 color_theme = tk.Menu(main_menu,tearoff=False) 
+
 color_theme.add_checkbutton(label='   Light Mode',compound=tk.LEFT,image=light_icon)
 color_theme.add_checkbutton(label='   Dark Mode',compound=tk.LEFT,image=dark_icon)
 
