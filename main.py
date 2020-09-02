@@ -28,15 +28,23 @@ status_icon=tk.PhotoImage(file='icons/status.png')
 light_icon=tk.PhotoImage(file='icons/light.png')
 dark_icon=tk.PhotoImage(file='icons/dark.png')
 
-
+#fonts
 toolbar=ttk.Label(win)
 toolbar.pack(side=tk.TOP,fill=tk.X)
 
 font_fam=tk.font.families()
 font_var=tk.StringVar()
-font_box=ttk.Combobox(toolbar,width=15,textvariable=font_var,state='readonly',background='lightblue')
+font_box=ttk.Combobox(toolbar,width=20,textvariable=font_var,state='readonly',background='lightblue')
 font_box['values']=font_fam
-font_box.grid(row=2,column=1,pady=10)
+font_box.current(4)
+font_box.grid(row=0,column=0,pady=10,padx=5)
+
+#fontsize
+size_var=tk.StringVar()
+size_box=ttk.Combobox(toolbar,width=10,textvariable=size_var)
+size_box['values']=tuple(range(2,72,2))
+size_box.current(3)
+size_box.grid(row=0,column=1,padx=5,pady=10)
 
 file = tk.Menu(main_menu,tearoff=False)
 
