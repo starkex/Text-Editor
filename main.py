@@ -34,6 +34,13 @@ ita_icon=tk.PhotoImage(file='icons./italic.png')
 under_icon=tk.PhotoImage(file='icons/underline.png')
 fo_color=tk.PhotoImage(file='icons/Untitled.png')
 
+#aligns
+left_icon=tk.PhotoImage(file='icons/left.png')
+center_icon=tk.PhotoImage(file='icons/center.png')
+right_icon=tk.PhotoImage(file='icons/right.png')
+
+
+
 #fonts
 toolbar=ttk.Label(win)
 toolbar.pack(side=tk.TOP,fill=tk.X)
@@ -61,6 +68,14 @@ underline=ttk.Button(toolbar,width=5,image=under_icon)
 underline.grid(row=0,column=4,padx=5,pady=10)
 fontcolor=ttk.Button(toolbar,width=5,image=fo_color)
 fontcolor.grid(row=0,column=5,pady=10,padx=5)
+
+#alignbuttons
+left=ttk.Button(toolbar,width=5,image=left_icon)
+left.grid(row=0,column=6,pady=10,padx=5)
+center=ttk.Button(toolbar,width=5,image=center_icon)
+center.grid(row=0,column=7,pady=10,padx=5)
+right=ttk.Button(toolbar,width=5,image=right_icon)
+right.grid(row=0,column=8,pady=10,padx=5)
 
 file = tk.Menu(main_menu,tearoff=False)
 
