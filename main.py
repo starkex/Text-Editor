@@ -39,8 +39,6 @@ left_icon=tk.PhotoImage(file='icons/left.png')
 center_icon=tk.PhotoImage(file='icons/center.png')
 right_icon=tk.PhotoImage(file='icons/right.png')
 
-
-
 #fonts
 toolbar=ttk.Label(win)
 toolbar.pack(side=tk.TOP,fill=tk.X)
@@ -86,6 +84,21 @@ scroll.pack(side=tk.RIGHT,fill=tk.Y)
 textedit.pack(fill=tk.BOTH, expand=True)
 scroll.config(command=textedit.yview)
 textedit.config(yscrollcommand=scroll.set)
+
+#statusbar
+status= ttk.Label(win,text="Status Bar")
+status.pack(side=tk.BOTTOM)
+
+#fonts Functions
+initial_font='Consolas'
+initial_size=10
+
+def change_font(win):
+    global initial_font
+    initial_font=font_var.get()
+    textedit.configure(font=(initial_font,initial_size))
+
+textedit.configure(font=('Consolas',10))
 
 file = tk.Menu(main_menu,tearoff=False)
 
