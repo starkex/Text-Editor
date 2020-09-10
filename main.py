@@ -34,6 +34,9 @@ ita_icon=tk.PhotoImage(file='icons./italic.png')
 under_icon=tk.PhotoImage(file='icons/underline.png')
 fo_color=tk.PhotoImage(file='icons/Untitled.png')
 
+#pallete
+wheel_icon=tk.PhotoImage(file='icons/cwheel.png')
+
 #aligns
 left_icon=tk.PhotoImage(file='icons/left.png')
 center_icon=tk.PhotoImage(file='icons/center.png')
@@ -66,6 +69,10 @@ underline=ttk.Button(toolbar,width=5,image=under_icon)
 underline.grid(row=0,column=4,padx=5,pady=10)
 fontcolor=ttk.Button(toolbar,width=5,image=fo_color)
 fontcolor.grid(row=0,column=5,pady=10,padx=5)
+
+#wheelbutton
+wheel=ttk.Button(toolbar,width=5,image=wheel_icon)
+wheel.grid(row=0,column=9,pady=10,padx=5)
 
 #alignbuttons
 left=ttk.Button(toolbar,width=5,image=left_icon)
