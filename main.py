@@ -77,6 +77,16 @@ center.grid(row=0,column=7,pady=10,padx=5)
 right=ttk.Button(toolbar,width=5,image=right_icon)
 right.grid(row=0,column=8,pady=10,padx=5)
 
+#TextAreaToEdit
+textedit=tk.Text(win)
+textedit.config(wrap="word",relief=tk.FLAT)
+scroll=tk.Scrollbar(win)
+textedit.focus_set()
+scroll.pack(side=tk.RIGHT,fill=tk.Y)
+textedit.pack(fill=tk.BOTH, expand=True)
+scroll.config(command=textedit.yview)
+textedit.config(yscrollcommand=scroll.set)
+
 file = tk.Menu(main_menu,tearoff=False)
 
 file.add_command(label='   New',image=new_icon,compound=tk.LEFT, accelerator='Ctrl+N')
@@ -108,6 +118,7 @@ main_menu.add_cascade(label='File',menu=file)
 main_menu.add_cascade(label='Edit',menu=Edit)
 main_menu.add_cascade(label='View',menu=view)
 main_menu.add_cascade(label='Theme',menu=color_theme)
+
 
 
 win.config(menu=main_menu)
