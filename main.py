@@ -451,6 +451,8 @@ view.add_checkbutton(label='Status Bar',onvalue=1, offvalue=False,variable = sho
 
 # -------------------------------------&&&&&&&& End main menu  functinality&&&&&&&&&&& ----------------------------------
 
+
+
 main_application.config(menu=main_menu)
 
 #### bind shortcut keys 
